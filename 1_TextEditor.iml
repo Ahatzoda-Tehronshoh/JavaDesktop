@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="JAVA_MODULE" version="4">
+  <component name="NewModuleRootManager" inherit-compiler-output="true">
+    <exclude-output />
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library" exported="">
+      <library>
+        <CLASSES>
+          <root url="jar://D:/MS SQL SERVER/sqljdbc_12.4/rus/jars/mssql-jdbc-12.4.0.jre8.jar!/" />
+          <root url="jar://D:/MS SQL SERVER/sqljdbc_12.4/rus/jars/mssql-jdbc-12.4.0.jre11.jar!/" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES>
+          <root url="jar://D:/MS SQL SERVER/sqljdbc_12.4/rus/jars/mssql-jdbc-12.4.0.jre8-sources.jar!/" />
+          <root url="jar://D:/MS SQL SERVER/sqljdbc_12.4/rus/jars/mssql-jdbc-12.4.0.jre11-sources.jar!/" />
+        </SOURCES>
+      </library>
+    </orderEntry>
+    <orderEntry type="library" exported="" name="x64" level="project" />
+  </component>
+</module>
