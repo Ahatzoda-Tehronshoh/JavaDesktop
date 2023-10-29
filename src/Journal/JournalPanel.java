@@ -305,6 +305,8 @@ public class JournalPanel extends JPanel {
                             + themeField.getText() + "' WHERE id = "
                             + listOfPairsColumn.get(journalTable.getSelectedColumn()) + ";"
             );
+
+            showJournalTable();
         } catch (Exception e) {
             e.printStackTrace();
         }

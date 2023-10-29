@@ -91,4 +91,6 @@ IF NOT EXISTS (SELECT * FROM journal_content WHERE id_journal = 1 AND id_student
 
 SELECT j.*, s.fio FROM journal_content j, student s where s.id = j.id_student;
 
+SELECT type_pair, COUNT(type_pair) as count FROM journal WHERE id_discipl = 1 GROUP BY type_pair; 
+
 SELECT * FROM journal;
