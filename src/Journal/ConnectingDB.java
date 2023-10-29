@@ -15,7 +15,9 @@ public class ConnectingDB {
     private final JFrame frame;
     private final Statement statement;
     private JTable groupTable;
+
     private final JournalPanel journalPanel;
+    private final StudentListPanel studentListPanel;
 
     private final ArrayList<Group> listOfGroups = new ArrayList<>();
 
@@ -38,13 +40,14 @@ public class ConnectingDB {
         frame.setLayout(new BoxLayout(frame.getContentPane(), BoxLayout.LINE_AXIS));
 
         journalPanel = new JournalPanel(statement, frame);
+        studentListPanel = new StudentListPanel(statement);
 
         groupsPanel();
 
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.setMinimumSize(new Dimension(1200, frame.getHeight()));
 
-        tabbedPane.addTab("Список", new JPanel());
+        tabbedPane.addTab("Список", studentListPanel);
 
         tabbedPane.addTab("Журнал", journalPanel);
 
@@ -89,8 +92,11 @@ public class ConnectingDB {
 
         groupTable = new JTable(model);
         groupTable.getSelectionModel().addListSelectionListener(e -> {
-            if (!e.getValueIsAdjusting() && groupTable.getSelectedRow() != -1)
-                journalPanel.change(listOfGroups.get(groupTable.getSelectedRow()).getId());
+            if (!e.getValueIsAdjusting() && groupTable.getSelectedRow() != -1) {
+                int selectedGroupId = listOfGroups.get(groupTable.getSelectedRow()).getId();
+                studentListPanel.change(selectedGroupId);
+                journalPanel.change(selectedGroupId);
+            }
         });
         groupTable.setPreferredScrollableViewportSize(new Dimension(400, 600));
 

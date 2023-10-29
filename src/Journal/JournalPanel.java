@@ -83,6 +83,7 @@ public class JournalPanel extends JPanel {
     private int pairCounter = 0;
 
     private void showJournalTable() {
+        infoLabel.setText("");
         DefaultTableModel model = new DefaultTableModel() {
             @Override
             public boolean isCellEditable(int row, int column) {
