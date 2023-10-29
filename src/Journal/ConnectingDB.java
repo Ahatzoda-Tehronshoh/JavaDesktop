@@ -47,11 +47,11 @@ public class ConnectingDB {
         JTabbedPane tabbedPane = new JTabbedPane();
         tabbedPane.setMinimumSize(new Dimension(1200, frame.getHeight()));
 
-        tabbedPane.addTab("Список", studentListPanel);
+        tabbedPane.addTab("Список", new JScrollPane(studentListPanel));
 
         tabbedPane.addTab("Журнал", journalPanel);
 
-        frame.add(tabbedPane);
+        frame.getContentPane().add(tabbedPane);
 
         //frame.pack();
         frame.setVisible(true);

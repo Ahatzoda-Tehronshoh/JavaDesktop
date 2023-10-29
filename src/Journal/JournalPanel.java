@@ -57,7 +57,9 @@ public class JournalPanel extends JPanel {
                     createAddingPairFrame().setVisible(true);
             }
         });
-        add(new JScrollPane(journalTable));
+        JScrollPane scrollPane = new JScrollPane(journalTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        journalTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        add(scrollPane);
 
         infoLabel = new JLabel();
         add(infoLabel);

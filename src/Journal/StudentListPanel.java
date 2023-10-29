@@ -25,8 +25,9 @@ public class StudentListPanel extends JPanel {
         setLayout(new BoxLayout(this, BoxLayout.PAGE_AXIS));
 
         studentsListTable = new JTable();
-        studentsListTable.setPreferredScrollableViewportSize(new Dimension(400, 600));
-        add(new JScrollPane(studentsListTable));
+        JScrollPane scrollPane = new JScrollPane(studentsListTable, JScrollPane.VERTICAL_SCROLLBAR_AS_NEEDED, JScrollPane.HORIZONTAL_SCROLLBAR_AS_NEEDED);
+        studentsListTable.setAutoResizeMode(JTable.AUTO_RESIZE_OFF);
+        add(scrollPane);
     }
 
     private void updateStudentsListTable() {
